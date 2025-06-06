@@ -5,9 +5,9 @@ from .models import Teacher, Student
 from .forms import UserRegisterForm, TeacherProfileForm, StudentProfileForm
 def dashboard(request):
      products = [
-        {"name": "Python Programming", "price": 19.99, "image": "https://i.ytimg.com/vi/-WyMacArwHA/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLApd3J5A_5EfFd9CFQVcDk0EK9jCw"},
-        {"name": "Tkinter Programming", "price": 9.98, "image": ""},
-        {"name": "Ruby on Rails", "price": 24.99, "image": "rails.jpg"},
+        {"name": "Python Programming", "price": 19.99, "image":"C:\Users\hp\Desktop\Django project\CRUD\OnlineUpskilling\static\image\css.jpeg"},
+        {"name": "Html", "price": 9.98, "image": ""},
+        {"name": "Ruby on Rails", "price": 24.99, "image": "C:\Users\hp\Desktop\Django project\CRUD\OnlineUpskilling\static\image\html.jpeg"},
         {"name": "Flask Programming", "price": 15.49, "image": "flask.jpg"},
         {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
          {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
