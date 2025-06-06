@@ -3,9 +3,21 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from .models import Teacher, Student
 from .forms import UserRegisterForm, TeacherProfileForm, StudentProfileForm
+from django.shortcuts import render
+
 
 def dashboard(request):
-    return render(request, 'dashboard.html')
+     products = [
+        {"name": "Python Programming", "price": 19.99, "image": "https://i.ytimg.com/vi/-WyMacArwHA/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLApd3J5A_5EfFd9CFQVcDk0EK9jCw"},
+        {"name": "Tkinter Programming", "price": 9.98, "image": "tkinter.jpg"},
+        {"name": "Ruby Programming", "price": 21.98, "image": "ruby.jpg"},
+        {"name": "Ruby on Rails", "price": 24.99, "image": "rails.jpg"},
+        {"name": "Flask Programming", "price": 15.49, "image": "flask.jpg"},
+        {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
+    ]
+     
+     return render(request, 'dashboard.html', {'products': products})
+
 
 def register(request):
     if request.method == 'POST':
@@ -46,4 +58,6 @@ def profile_complete(request):
         form = form_class(instance=request.user.teacher if request.user.is_teacher else request.user.student)
     
     return render(request, 'profile_complete.html', {'form': form})
+
+
 
