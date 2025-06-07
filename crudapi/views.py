@@ -3,14 +3,10 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from .models import Teacher, Student
 from .forms import UserRegisterForm, TeacherProfileForm, StudentProfileForm
+from django.shortcuts import render
 def dashboard(request):
      products = [
-        {"name": "Python Programming", "price": 19.99, "image":"C:\Users\hp\Desktop\Django project\CRUD\OnlineUpskilling\static\image\css.jpeg"},
-        {"name": "Html", "price": 9.98, "image": ""},
-        {"name": "Ruby on Rails", "price": 24.99, "image": "C:\Users\hp\Desktop\Django project\CRUD\OnlineUpskilling\static\image\html.jpeg"},
-        {"name": "Flask Programming", "price": 15.49, "image": "flask.jpg"},
-        {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
-         {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
+       
          {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
          {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
          {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
@@ -64,4 +60,11 @@ def profile_complete(request):
     return render(request, 'profile_complete.html', {'form': form})
 
 
+
+# Create your views here.
+
+def index(request):
+    """ A view to return the index page """
+    
+    return render(request, 'home/index.html')
 
