@@ -11,7 +11,7 @@ class UserRegisterForm(UserCreationForm):
     
     class Meta:
         model = User
-        fields = [ 'email', 'password1', 'password2', 'is_teacher', 'is_student']
+        fields = [ 'username','email', 'password1', 'password2', 'is_teacher', 'is_student']
 
 class TeacherProfileForm(forms.ModelForm):
     class Meta:
