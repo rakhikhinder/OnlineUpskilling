@@ -17,6 +17,9 @@ urlpatterns = [
     path('', views.dashboard, name="dashboard"),
     path('create-payment-intent/', views.create_payment_intent, name='create-payment-intent'),
     path('dashboard/', views.admin_dashboard, name='admin_dashboard'),
+    path('subscribe/', views.subscribe, name='subscribe'),
+    path('subscription_success/', views.subscription_success, name='subscription_success'),
+
      
 
    

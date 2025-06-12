@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from .models import Teacher, Student,Product
-from .forms import UserRegisterForm, TeacherProfileForm, StudentProfileForm, CommentForm
+from .forms import UserRegisterForm, TeacherProfileForm, StudentProfileForm, CommentForm,SubscriptionForm
 from django.shortcuts import render
 from django.conf import settings
 from django.http import JsonResponse
@@ -10,6 +10,7 @@ from django.views.decorators.csrf import csrf_exempt
 import stripe
 from django.http import HttpResponse
 import json
+from .models import Subscription
 
 def dashboard(request):
      products = Product.objects.all()
@@ -93,6 +94,20 @@ def create_payment_intent(request):
 
 def admin_dashboard(request):
     return HttpResponse("Welcome to the Admin Dashboard!")
+def subscribe(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            subscription, created = Subscription.objects.get_or_create(user=request.user)
+            subscription.plan = form.cleaned_data['plan']
+            subscription.active = True
+            subscription.save()
+            return redirect('subscription_success')
+    else:
+        form = SubscriptionForm()
+def subscription_success(request):
+    return render(request, 'subscription_success.html')
+
 
 
 

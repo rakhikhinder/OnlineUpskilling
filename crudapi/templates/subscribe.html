@@ -1,0 +1,6 @@
+<h2>Choose a Subscription Plan</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Subscribe</button>
+</form>

@@ -1,7 +1,7 @@
 # forms.py
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from .models import User, Teacher, Student,Comment, Product
+from .models import User, Teacher, Student,Comment, Product,Subscription
 
 
 
@@ -34,5 +34,9 @@ class CourseForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
+class SubscriptionForm(forms.ModelForm):
+    class Meta:
+        model = Subscription
+        fields = ['plan']
 
     
