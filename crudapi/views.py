@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
+from django.contrib import messages
 from .models import Teacher, Student,Product
 from .forms import UserRegisterForm, TeacherProfileForm, StudentProfileForm, CommentForm,SubscriptionForm
 from django.shortcuts import render
 from django.conf import settings
 from django.http import JsonResponse
+from django.core.exceptions import ObjectDoesNotExist
 from django.views.decorators.csrf import csrf_exempt
 import stripe
 from django.http import HttpResponse
@@ -49,7 +51,6 @@ def register(request):
                 user.is_student = True
             user.save()
             
-            login(request, user)
             return redirect('profile_complete')
     else:
         form = UserRegisterForm()
@@ -77,6 +78,34 @@ def profile_complete(request):
     return render(request, 'profile_complete.html', {'form': form})
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
+
+def logout_user(request):
+    logout(request)
+    messages.success(request, ("You have been logged out... Thanks for stopping by..."))
+    return redirect('dashboard')
+
+@login_required
+def profile_show(request):
+     try:
+        # Check if the user is a Teacher
+        if hasattr(request.user, 'teacher'):
+            profile = request.user.teacher
+            profile_type = 'teacher'
+        # Check if the user is a Student
+        elif hasattr(request.user, 'student'):
+            profile = request.user.student
+            profile_type = 'student'
+        else:
+            return HttpResponse("You don't have a profile.")
+        
+        return render(request, 'profileshow.html', {
+            'profile': profile,
+            'profile_type': profile_type,
+        })
+     except ObjectDoesNotExist:
+        return HttpResponse("Profile does not exist.")
+    
+    
 @csrf_exempt
 def create_payment_intent(request):
     if request.method == 'POST':
@@ -108,6 +137,8 @@ def subscribe(request):
     return render(request ,'subscription_success.html',{'form': form})
 def subscription_success(request):
     return render(request, 'subscription_success.html')
+
+
 
 
 

@@ -8,6 +8,7 @@
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit" class="btn btn-primary">Save Profile</button>
+            <button class="btn btn-primary"><a class="text-white" href="{% url 'profile_show' %}">Profile_show</a></button>
         </form>
     </div>
 </div>
