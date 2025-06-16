@@ -105,6 +105,7 @@ def subscribe(request):
             return redirect('subscription_success')
     else:
         form = SubscriptionForm()
+    return render(request ,'subscription_success.html',{'form': form})
 def subscription_success(request):
     return render(request, 'subscription_success.html')
 
