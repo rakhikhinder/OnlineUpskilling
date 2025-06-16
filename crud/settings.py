@@ -145,7 +145,15 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# pyment 
+STRIPE_SECRET_KEY = 'sk_test_...'  # Replace with your secret key
+STRIPE_PUBLISHABLE_KEY = 'pk_test_...'
+
+
+
