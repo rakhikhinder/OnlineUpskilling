@@ -80,7 +80,6 @@ def profile_complete(request):
             return redirect('dashboard')
     else:
         form = form_class(instance=request.user.teacher if request.user.is_teacher else request.user.student)
-
     return render(request, 'profile_complete.html', {'form': form})
 
 
