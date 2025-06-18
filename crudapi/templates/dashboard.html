@@ -15,21 +15,33 @@
   <style>
     .card-img-top {
       object-fit: cover;
-      height: 200px;
+
     }
     @media (max-width: 576px) {
       .card-img-top {
         height: 150px;
       }
     }
+    header{
+      width: 1200px;
+      margin-left: 120px;
+      height: 300px;
+      margin-top: 0;
+      background:rgb(91, 161, 199);
+    }
+   
+    section {
+      display: flex;
+    }
+  
   </style>
 </head>
 <body>
 
 <!-- Hero Section -->
-<header class="bg-dark text-white py-5 mb-5">
-  <div class="container text-center">
-    <h1 class="fw-bold">Online Up  skilling </h1>
+<header class='text-black py-5 my-5';>
+  <div class="container text-center ">
+    <h1 class="vv fw-bold">Online Up  skilling </h1>
     {% if user.is_authenticated %}
         <p>Hello, {{ user.username }}!</p>
         {% if user.is_teacher %}  

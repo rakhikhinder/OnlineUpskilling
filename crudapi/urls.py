@@ -13,6 +13,7 @@ urlpatterns = [
     path('profile/complete/', views.profile_complete, name='profile_complete'),
     path('profile/show/', views.profile_show, name="profile_show"), 
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+    path('logout/', views.logout_user, name='logout'),
     path('logout/',views.logout, name='logout'),
     path('product/<int:pk>/', views.product, name='product'),
     path('', views.dashboard, name="dashboard"),
@@ -20,8 +21,6 @@ urlpatterns = [
     path('dashboard/', views.admin_dashboard, name='admin_dashboard'),
     path('subscribe/', views.subscribe, name='subscribe'),
     path('subscription_success/', views.subscription_success, name='subscription_success'),
-
-     
 
    
 ]
