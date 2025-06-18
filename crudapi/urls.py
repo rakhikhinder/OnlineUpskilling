@@ -13,11 +13,8 @@ urlpatterns = [
     path('profile/complete/', views.profile_complete, name='profile_complete'),
     path('profile/show/', views.profile_show, name="profile_show"), 
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
-<<<<<<< HEAD
     path('logout/', views.logout_user, name='logout'),
-=======
     path('logout/',views.logout, name='logout'),
->>>>>>> origin/master
     path('product/<int:pk>/', views.product, name='product'),
     path('', views.dashboard, name="dashboard"),
     path('create-payment-intent/', views.create_payment_intent, name='create-payment-intent'),
