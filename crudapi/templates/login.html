@@ -1,10 +1,51 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Login</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Login</button>
-    </form>
+<style>
+
+body {
+     background:white;
+}
+
+.login {
+    width: 400px;
+    height: 400px;
+    padding-left: 70px;
+    padding-top: 40px;
+    text: white;
+   background:rgb(91, 161, 199);
+    margin-left: 40%;
+    margin-top: 5%;
+    color: black;
+    font-size: 15px;
+}
+
+h2 {    
+    padding-bottom: 10px;
+    padding-left: 80px;
+    color: black;
+    font-size: 50px;
+    
+}
+
+.b {
+    margin-left:30%;
+    font-size: 25px;
+    background-color: white;
+    margin-top: 30px;    
+}
+
+.form {
+
+}
+</style>
+<div class="login">
+    <h2>Login</h2>
+        <form method="post" >
+            {% csrf_token %}
+            {{ form.as_p }}
+            {{ form.}}
+            <button class="b" type="submit">Login</button>
+        </form>
+</div>
 {% endblock %}
