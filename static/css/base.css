@@ -69,9 +69,7 @@ nav  .logo {
  }
 
 .main {
-   padding-top: 100px;
-   display: fixed;
-   background: url("/OnlineUpskilling/static/background.jpeg") no-repeat center center fixed;
+  padding-top: 200px;
 }
 
 h2{

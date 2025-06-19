@@ -3,32 +3,9 @@
 
 {% block content %}
 <style>
-  :root {
-    --primary-gradient: linear-gradient(to right, #1e3c72, #2a5298);
-    --card-bg: #ffffff;
-    --card-shadow: rgba(0, 0, 0, 0.1);
-  }
+  
 
-  body {
-    background: url("{% static 'images/bg.jpg' %}") no-repeat center center fixed;
-    background-size: cover;
-  }
-
-  /* Optional: add a semi-transparent overlay for contrast */
-  .bg-overlay {
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 40px 0;
-    border-radius: 20px;
-  }
-
-  .hero-header {
-    background: var(--primary-gradient);
-    color: white;
-    padding: 70px 0;
-    margin-bottom: 40px;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
+  
 
   .card-img-top {
     object-fit: cover;
@@ -83,7 +60,7 @@
 
 <!-- Hero Section -->
 <header class="hero-header text-center">
-  <div class="container">
+  <div class="head">
     <h1 class="fw-bold display-5">Online Upskilling</h1>
     {% if user.is_authenticated %}
       <p class="lead mt-3">Hello, <strong>{{ user.username }}</strong>!</p>
@@ -100,7 +77,7 @@
 
 <!-- Product Grid with Background Overlay -->
 <section class="py-5">
-  <div class="container px-4 px-lg-5 bg-overlay">
+  <div class=" px-4 px-lg-5 bg-overlay">
     <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-center">
       {% for product in products %}
       <div class="col mb-5">
