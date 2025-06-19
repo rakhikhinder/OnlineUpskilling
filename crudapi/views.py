@@ -21,7 +21,7 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
 def dashboard(request):
-<<<<<<< HEAD
+
     products = Product.objects.all()
     return render(request, 'dashboard.html', {'products': products})
 
@@ -40,20 +40,6 @@ def product(request, pk):
     else:
         form = CommentForm()
     return render(request, 'product.html', {'product': product, 'comments': comments, 'form': form})
-=======
-     products = [
-       
-         {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
-         {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
-         {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
-         {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
-         {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
-         {"name": "Django Programming", "price": 18.75, "image": "django.jpg"},
-        
-    ]
-     
-     return render(request, 'dashboard.html', {'products': products})
->>>>>>> origin
 
 
 def register(request):
