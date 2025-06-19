@@ -1,7 +1,9 @@
 # forms.py
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from .models import User, Teacher, Student
+from .models import User, Teacher, Student,Comment, Product
+
+
 
 class UserRegisterForm(UserCreationForm):
     is_teacher = forms.BooleanField(required=False, label='Register as Teacher')
@@ -20,4 +22,17 @@ class StudentProfileForm(forms.ModelForm):
     class Meta:
         model = Student
         fields = ['grade_level', 'interests']
+    
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['body']
+        
+        
+        
+class CourseForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = '__all__'
+
     
