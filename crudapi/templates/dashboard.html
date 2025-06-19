@@ -4,93 +4,155 @@
 {% block content %}
 <style>
   :root {
-    --primary-gradient: linear-gradient(to right, #1e3c72, #2a5298);
+    --primary-gradient: linear-gradient(to right, #5a98d0, #2a5298);
     --card-bg: #ffffff;
-    --card-shadow: rgba(0, 0, 0, 0.1);
+    --overlay-bg: rgba(255, 255, 255, 0.9);
+    --text-color: #333;
+    --accent-color: #2a5298;
+    --badge-teacher: #007bff;
+    --badge-student: #28a745;
   }
 
   body {
     background: url("{% static 'images/bg.jpg' %}") no-repeat center center fixed;
     background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
   }
 
-  /* Optional: add a semi-transparent overlay for contrast */
   .bg-overlay {
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 40px 0;
-    border-radius: 20px;
+    background-color: var(--overlay-bg);
+    padding: 3rem 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   }
 
   .hero-header {
     background: var(--primary-gradient);
-    color: white;
-    padding: 70px 0;
-    margin-bottom: 40px;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    margin-bottom: 3rem;
   }
 
-  .card-img-top {
-    object-fit: cover;
-    height: 200px;
-    transition: transform 0.6s ease, box-shadow 0.4s ease;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+  .hero-header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
 
-  .card:hover .card-img-top {
-    transform: scale(1.1) rotate(1deg);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  .hero-header .lead {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-header .badge {
+    padding: 0.5em 1em;
+    font-size: 0.9rem;
+    border-radius: 20px;
   }
 
   .card {
-    transition: transform 0.4s ease, box-shadow 0.3s ease;
-    background-color: var(--card-bg);
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: var(--card-bg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px var(--card-shadow);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover .card-img-top {
+    transform: scale(1.05);
   }
 
   .card-body {
-    background-color: #f9f9f9;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+    padding: 1.2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+
+  .card-body h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
   }
 
   .card-footer {
-    background-color: transparent;
+    background: transparent;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .btn-outline-primary {
+    border-radius: 30px;
+    padding: 0.4rem 1.2rem;
+    transition: all 0.3s ease;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+
+  .btn-outline-primary:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+  }
+
+  /* ✅ Rotating Heading Animation */
+  @keyframes professionalRotate {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+  .rotating-heading {
+    display: inline-block;
+    animation: professionalRotate 6s linear infinite;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
   }
 
   @media (max-width: 576px) {
     .card-img-top {
       height: 150px;
     }
-  }
 
-  .btn-outline-primary {
-    transition: all 0.3s ease;
-  }
+    .hero-header h1 {
+      font-size: 2rem;
+    }
 
-  .btn-outline-primary:hover {
-    background-color: #2a5298;
-    color: white;
+    .hero-header .lead {
+      font-size: 1rem;
+    }
   }
 </style>
 
 <!-- Hero Section -->
-<header class="hero-header text-center">
+<header class="hero-header">
   <div class="container">
-    <h1 class="fw-bold display-5">Online Upskilling</h1>
+    <h1 class="rotating-heading">Online Upskilling</h1>
     {% if user.is_authenticated %}
-      <p class="lead mt-3">Hello, <strong>{{ user.username }}</strong>!</p>
+      <p class="lead">Hello, <strong>{{ user.username }}</strong>!</p>
       {% if user.is_teacher %}
-        <p class="badge bg-primary fs-6">You are registered as a Teacher</p>
+        <span class="badge" style="background-color: var(--badge-teacher);">You are registered as a Teacher</span>
       {% elif user.is_student %}
-        <p class="badge bg-success fs-6">You are registered as a Student</p>
+        <span class="badge" style="background-color: var(--badge-student);">You are registered as a Student</span>
       {% endif %}
     {% else %}
       <p class="lead">You are not logged in.</p>
@@ -98,24 +160,20 @@
   </div>
 </header>
 
-<!-- Product Grid with Background Overlay -->
+<!-- Product Grid Section -->
 <section class="py-5">
-  <div class="container px-4 px-lg-5 bg-overlay">
-    <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-center">
+  <div class="container bg-overlay">
+    <div class="course-section">
+    <div class="row gx-4 gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-center">
       {% for product in products %}
-      <div class="col mb-5">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeInUp">
-          <!-- Product image -->
+      <div class="col">
+        <div class="card shadow-sm animate__animated animate__fadeInUp">
           <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
-          
-          <!-- Product details -->
-          <div class="card-body text-center">
-            <h5 class="fw-semibold">{{ product.name }}</h5>
-            <p class="text-muted mb-0">${{ product.price }}</p>
+          <div class="card-body">
+            <h5>{{ product.name }}</h5>
+            <p class="text-muted">${{ product.price }}</p>
           </div>
-
-          <!-- Product actions -->
-          <div class="card-footer text-center pb-3">
+          <div class="card-footer">
             <a href="{% url 'product' product.id %}" class="btn btn-outline-primary">View Product</a>
           </div>
         </div>
