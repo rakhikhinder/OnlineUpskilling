@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .img {
+        background-image: url("{% static 'css/background.jpeg' %}") ;
+        width: 1300px;
+        margin-left: 65px;
+        height: 500px;
+    }
+
+    h1 {
+        padding-top: 50px;
+        padding-left: 400px;
+        color: black;
+        font-size: 80px;
+        font-weight: bold;
+        color:  black;
+    }
+
+    h2 {
+        padding-top: 130px;
+        padding-left: 280px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+</style>
+
+<div class="img">
+    <h1> OnlineUpSkilling </h1>
+    <h2>"Change is the end result of all true learning.</h2>   
+</div>
+
+<div class="info"></div>
+{% endblock %}

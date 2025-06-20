@@ -5,8 +5,27 @@
 <html>
 <head>
     <title>Profile</title>
+    <style>
+        body {
+            background: white;
+        }
+
+        .profile {
+            width: 400px;
+    height: 400px;
+    padding-left: 1200px;
+    padding-top: 40px;
+    text: white;
+   background:rgb(91, 161, 199);
+    margin-left: 40%;
+    margin-top: 5%;
+    color: black;
+    font-size: 15px; 
+        }
+    </style>
 </head>
 <body>
+    <div class="profile">
     <h1>{{ profile_type|title }} Profile</h1>
     
     <!-- Profile Image -->
@@ -39,6 +58,7 @@
     {% endif %}
 
     <p><strong>Joined:</strong> {{ profile.created|date:"F d, Y" }}</p>
+    </div>
 </body>
 </html>
 
