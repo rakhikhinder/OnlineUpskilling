@@ -21,6 +21,7 @@ urlpatterns = [
     path('dashboard/', views.admin_dashboard, name='admin_dashboard'),
     path('subscribe/', views.subscribe, name='subscribe'),
     path('subscription_success/', views.subscription_success, name='subscription_success'),
+    path('about/', views.about, name='about'),
 
    
 ]

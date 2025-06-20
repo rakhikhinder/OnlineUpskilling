@@ -148,3 +148,6 @@ def subscribe(request):
 @login_required
 def subscription_success(request):
     return render(request, 'subscription_success.html')
+
+def about(request):
+    return render(request, 'about.html')

@@ -10,13 +10,13 @@
 }
 
 nav {
-  position: fixed;
   display: flex;
+  position: fixed;
   align-items: center;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
   transition: all 0.4s ease;
 }
 
@@ -29,8 +29,8 @@ nav  {
 nav .container{
   height: 100%;
   max-width: 1200px;
-  margin: auto;
   display: flex;
+  margin: auto;
   align-items: horizontal;
   justify-content: space-between;
 }
@@ -49,6 +49,7 @@ nav  .logo {
   display: flex;
   align-items: center;
   flex-direction: row;
+  justify-content: space-between;
   
 }
 
@@ -68,8 +69,8 @@ nav  .logo {
    color: #f3f3f5;
  }
 
-.main {
-  padding-top: 200px;
+.main{
+  padding-top: 10%;
 }
 
 h2{
@@ -83,3 +84,4 @@ h2{
   padding: 40px 80px;
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
 }
+
