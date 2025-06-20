@@ -17,8 +17,10 @@ class UserRegisterForm(UserCreationForm):
 class TeacherProfileForm(forms.ModelForm):
     
     class Meta:
+        
         model = Teacher
         fields = '__all__'
+        exclude = ['user']
               
 
 class StudentProfileForm(forms.ModelForm):
