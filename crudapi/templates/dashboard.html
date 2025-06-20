@@ -1,8 +1,7 @@
-
 {% extends 'base.html' %}
+{% load static %}
 
-{% block content %}
- 
+{% block content %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,72 +9,122 @@
   <title>Shop in Style</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap 5 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
+<style>
+
+  h4 {
+    padding-right: 450px;
+    padding-top: 50px;
+    font-size: 25px;
+  }
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 50px;
+  }
+
+  .cont {
+    color: black;
+    font-size: 50px;
+    padding-left: 30px;
+  }
+  header {
+    background-image: url("{% static 'css/background.jpeg' %}") ;
+        width: 1300px;
+        height: 500px;
+        margin-left: 65px;
+  }
+
+  .card-img-top {
+    object-fit: cover;
+    height: 200px;
+    width: 300px;
+    transition: transform 0.6s ease, box-shadow 0.4s ease;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  .card:hover .card-img-top {
+    transform: scale(1.1) rotate(1deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .card {
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px var(--card-shadow);
+  }
+
+  .card-body {
+    background-color: #f9f9f9;  
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .card-footer {
+    background-color: transparent;
+  }
+
+  @media (max-width: 576px) {
     .card-img-top {
-      object-fit: cover;
-      height: 200px;
+      height: 150px;
+      
     }
-    @media (max-width: 576px) {
-      .card-img-top {
-        height: 150px;
-      }
-    }
-  </style>
+  }
+
+  .btn-outline-primary {
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline-primary:hover {
+    background-color: #2a5298;
+    color: white;
+  }
+</style>
 </head>
-<body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Codemy Ecommerce</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Course</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">All Courses</a></li>
-            <li><a class="dropdown-item" href="#">Popular Courses</a></li>
-            <li><a class="dropdown-item" href="#">New Arrivals</a></li>
-          </ul>
-        </li>
-      </ul>
-      <a class="btn btn-outline-dark" href="#">🛒 Cart</a>
-    </div>
-  </div>
-</nav>
-
 <!-- Hero Section -->
-<header class="bg-dark text-white py-5 mb-5">
-  <div class="container text-center">
-    <h1 class="fw-bold">Online Up  skilling </h1>
-    <p class="lead">With this Courses homepage</p>
+<header class=" text-white py-5 mb-5">
+  <div class="cont text-center ">
+    <h1 class="vv fw-bold">Online Up  skilling </h1>
+    <div class="Us">
+      {% if user.is_authenticated %}
+          <h4>Hello, {{ user.username }}</h4>
+          {% if user.is_teacher %}  
+              <h4>You are registered as a teacher.</h4>
+          {% elif user.is_student %}
+              <h4>You are registered as a student.</h4>
+          {% endif %}
+      {% else %}
+          <h4>You are not logged in.</
+      {% endif %}
+    </div>
   </div>
 </header>
 
-<!-- Product Grid -->
-<section class="pb-5">
-  <div class="container px-4 px-lg-5">
-    <div class="row gx-4 gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-center">
+<!-- Product Grid with Background Overlay -->
+<section class="py-5">
+  <div class=" px-4 px-lg-5 bg-overlay">
+    <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-center">
       {% for product in products %}
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="{{ product.image }}" class="card-img-top" alt="{{ product.name }}">
+      <div class="col mb-5">
+        <div class="card h-100 shadow-sm animate__animated animate__fadeInUp">
+          <!-- Product image -->
+          <img class="card-img-top " src="{{ product.image.url }}" alt="{{ product.name }}">
+          
+          <!-- Product details -->
           <div class="card-body text-center">
-            <h5 class="card-title">{{ product.name }}</h5>
-            <p class="card-text">${{ product.price }}</p>
+            <h5 class="fw-semibold">{{ product.name }}</h5>
+            <p class="text-muted mb-0">${{ product.price }}</p>
           </div>
-          <div class="card-footer text-center bg-transparent border-0">
-            <a href="#" class="btn btn-outline-dark">View options</a>
+
+          <!-- Product actions -->
+          <div class="card-footer text-center pb-3">
+            <a href="{% url 'product' product.id %}" class="btn btn-outline-primary">View Product</a>
           </div>
         </div>
       </div>
@@ -84,14 +133,6 @@
   </div>
 </section>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<footer>
-
-</body>
-</html>
-
-
-
- 
+<!-- Animation CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 {% endblock %}

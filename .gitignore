@@ -14,8 +14,6 @@ venv.bak/
 *.log
 local_settings.py
 db.sqlite3
-media/
-staticfiles/
 
 # Pip
 pip-log.txt
