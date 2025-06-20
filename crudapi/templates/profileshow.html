@@ -1,36 +1,32 @@
-{% include "base.html" %} 
+{% extends "base.html" %} 
+
 
 {% block content %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Profile</title>
-    <style>
-        body {
+
+<style>
+     body {
             background: white;
         }
 
         .profile {
-            width: 400px;
-    height: 400px;
-    padding-left: 1200px;
-    padding-top: 40px;
+            width: 600px;
+    height: 700px;
+    padding-left: 170px;
     text: white;
-   background:rgb(91, 161, 199);
-    margin-left: 40%;
-    margin-top: 5%;
+   background:rgb(137, 178, 200);
+    margin-left: 30%;
     color: black;
-    font-size: 15px; 
+    font-size: 25px; 
+    padding-top: 20px;
         }
-    </style>
-</head>
-<body>
+        
+</style>
     <div class="profile">
     <h1>{{ profile_type|title }} Profile</h1>
     
     <!-- Profile Image -->
     {% if profile.prof_img %}
-        <img src="{{ profile.prof_img.url }}" alt="Profile Image" width="200">
+        <img src="{{ profile.prof_img.url }}" alt="Profile Image" width="300" height="200">
     {% else %}
         <p>No profile image uploaded.</p>
     {% endif %}
@@ -59,7 +55,5 @@
 
     <p><strong>Joined:</strong> {{ profile.created|date:"F d, Y" }}</p>
     </div>
-</body>
-</html>
 
 {% endblock %}

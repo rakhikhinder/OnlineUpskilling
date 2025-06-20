@@ -75,7 +75,7 @@ def profile_complete(request):
         return redirect('dashboard')
 
     if request.method == 'POST':
-        form = form_class(request.POST, instance=request.user.teacher if request.user.is_teacher else request.user.student)
+        form = form_class(request.POST,request.FILES, instance=request.user.teacher if request.user.is_teacher else request.user.student)
         if form.is_valid():
             form.save()
             return redirect('dashboard')
