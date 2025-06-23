@@ -2,12 +2,29 @@
 
 {% block content %}
 <style>
+
+  .btn-outline-primary {
+    border: solid;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 3px 8px;
+    margin-top: 30px;
+    background-color:white;
+     transition: all 0.3s ease;
+  }
+
+  .btn-outline-primary:hover {
+    background-color: #2a5298;
+    color: white;
+  }
+
   .sub {
     width: 600px;
     height: 330px;
     margin: 0 auto;
     text-align: center;
-    background: rgb(91, 161, 199);
+    background: rgb(204, 188, 164);
     color: black;
     font-size: 20px; 
     padding-top: 70px;  
@@ -28,7 +45,7 @@
 <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
-  <button type="submit">Subscribe</button>
+  <button class="btn btn-outline-primary" type="submit">Subscribe</button>
 </form>
 </div>
 {% endblock %}

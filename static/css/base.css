@@ -41,10 +41,6 @@ nav .logo {
   color: #d9deea;
 }
 
-nav  .logo {
-  color: #fff;
-}
-
 .container .navbar-nav{
   display: flex;
   align-items: center;
@@ -76,7 +72,7 @@ nav  .logo {
 h2{
   font-size: 30px;
   margin-bottom: 6px;
-  color: #4070f4;   
+  color: #0e0e0e;   
 }
 
 .text{
