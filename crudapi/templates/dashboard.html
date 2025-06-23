@@ -11,6 +11,11 @@
 
 <style>
 
+  h4 {
+    padding-right: 450px;
+    padding-top: 50px;
+    font-size: 25px;
+  }
   h1 {
     font-size: 50px;
     font-weight: bold;
@@ -19,21 +24,14 @@
 
   .cont {
     color: black;
-    font-size: 30px
-    center-left:20;
-
-    
+    font-size: 50px;
+    padding-left: 30px;
   }
   header {
     background-image: url("{% static 'css/background.jpeg' %}") ;
         width: 1300px;
-        margin-left: 65px;
         height: 500px;
-  }
-  section {
-    
-    
-    
+        margin-left: 65px;
   }
 
   .card-img-top {
@@ -93,16 +91,18 @@
 <header class=" text-white py-5 mb-5">
   <div class="cont text-center ">
     <h1 class="vv fw-bold">Online Up  skilling </h1>
+    <div class="Us">
       {% if user.is_authenticated %}
-          <p>Hello, {{ user.username }}!</p>
+          <h4>Hello, {{ user.username }}</h4>
           {% if user.is_teacher %}  
-              <p>You are registered as a teacher.</p>
+              <h4>You are registered as a teacher.</h4>
           {% elif user.is_student %}
-              <p>You are registered as a student.</p>
+              <h4>You are registered as a student.</h4>
           {% endif %}
       {% else %}
-          <p>You are not logged in.</p
+          <h4>You are not logged in.</
       {% endif %}
+    </div>
   </div>
 </header>
 
