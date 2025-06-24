@@ -20,13 +20,39 @@ class TeacherProfileForm(forms.ModelForm):
         
         model = Teacher
         fields = '__all__'
+        widgets = {
+            'qualification': forms.TextInput(attrs={'class': 'form-control'}),
+            'experience': forms.NumberInput(attrs={'class': 'form-control'}),
+            'subject': forms.TextInput(attrs={'class': 'form-control'}),
+            'phone': forms.NumberInput(attrs={'class': 'form-control'}),
+        }
         exclude = ['user']
+        
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.fields['prof_img'].widget.attrs.update({'class': 'form-control'})
               
 
 class StudentProfileForm(forms.ModelForm):
     class Meta:
         model = Student
-        fields = '__all__'
+        fields = ['prof_img', 'college', 'address', 'state', 'Country', 'city', 'pin_code', 'phone']
+        widgets = {
+            'college': forms.TextInput(attrs={'class': 'form-control'}),
+            'address': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
+            'state': forms.TextInput(attrs={'class': 'form-control'}),
+            'Country': forms.TextInput(attrs={'class': 'form-control'}),
+            'city': forms.TextInput(attrs={'class': 'form-control'}),
+            'pin_code': forms.NumberInput(attrs={'class': 'form-control'}),
+            'phone': forms.NumberInput(attrs={'class': 'form-control'}),
+        }
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['prof_img'].widget.attrs.update({'class': 'form-control'})
+        # Add placeholders if needed
+        self.fields['phone'].widget.attrs.update({'placeholder': 'Enter 10-digit phone number'})
+        self.fields['pin_code'].widget.attrs.update({'placeholder': '6-digit postal code'})
  
        
 class CommentForm(forms.ModelForm):
