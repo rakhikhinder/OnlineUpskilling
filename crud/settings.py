@@ -1,5 +1,9 @@
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+import dj_database_url
+
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -32,6 +36,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'storages',
+    'whitenoise.runserver_nostatic',
     'crispy_bootstrap5',
 ]
 
@@ -54,7 +59,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             BASE_DIR / 'templates',
-            os.path.join(BASE_DIR, 'templates', 'allauth'),
+            BASE_DIR / 'templates' / 'allauth',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -88,12 +93,13 @@ LOGIN_URL = '/accounts/login/'
 WSGI_APPLICATION = 'crud.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "Mydatabase.sqlite3"
-    }
+    'default': dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'Mydatabase.sqlite3'}",
+        conn_max_age=600,
+        ssl_require=not DEBUG
+    )
 }
-
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
@@ -106,10 +112,10 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-if 'USE_AWS' in os.environ:
+if os.environ.get('USE_AWS'):
     AWS_STORAGE_BUCKET_NAME = 'onlineupskilling'
     AWS_S3_REGION_NAME = 'us-east-2'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
@@ -123,3 +129,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
