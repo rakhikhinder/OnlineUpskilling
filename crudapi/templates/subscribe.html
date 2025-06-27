@@ -1,8 +1,5 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <style>
-
   .btn-outline-primary {
     border: solid;
     font-size: 20px;
@@ -10,8 +7,8 @@
     border-radius: 15px;
     padding: 3px 8px;
     margin-top: 30px;
-    background-color:white;
-     transition: all 0.3s ease;
+    background-color: white;
+    transition: all 0.3s ease;
   }
 
   .btn-outline-primary:hover {
@@ -26,8 +23,8 @@
     text-align: center;
     background: rgb(204, 188, 164);
     color: black;
-    font-size: 20px; 
-    padding-top: 70px;  
+    font-size: 20px;
+    padding-top: 70px;
   }
 
   h2 {
@@ -39,13 +36,28 @@
   button {
     margin-top: 20px;
   }
+
+  select {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
 </style>
+
 <div class="sub">
-<h2>Choose a Subscription Plan</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button class="btn btn-outline-primary" type="submit">Subscribe</button>
-</form>
+  <h2>Choose a Subscription Plan</h2>
+  <form method="post">
+    {% csrf_token %}
+    <label for="plan">Select Plan:</label>
+    <br />
+    <select name="plan" id="plan" required>
+      <option value="">--Select Plan--</option>
+      <option value="basic">Basic</option>
+      <option value="premium">Premium</option>
+    </select>
+    <br />
+    <button class="btn btn-outline-primary" type="submit">Subscribe</button>
+  </form>
 </div>
 {% endblock %}

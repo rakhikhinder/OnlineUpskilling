@@ -3,7 +3,7 @@ from django.contrib.auth import views as auth_views
 from . import views
 from django.urls import path
 from .views import create_payment_intent
-
+from .views import stripe_webhook
 
 
 
@@ -22,6 +22,6 @@ urlpatterns = [
     path('subscribe/', views.subscribe, name='subscribe'),
     path('subscription_success/', views.subscription_success, name='subscription_success'),
     path('about/', views.about, name='about'),
-
-   
+    path('stripe/webhook/', stripe_webhook, name='stripe-webhook'),
+    path('subscribe/cancel/', views.subscription_cancel, name='subscription_cancel'),
 ]

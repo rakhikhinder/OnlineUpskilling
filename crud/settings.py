@@ -22,6 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-i*z3+zuo&%z1ds$jbm&8de=v^=qfyg^p=w)%0$e&r&bu662vr('
 
+STRIPE_SECRET_KEY = 'sk_test_51Rdr7rRoiR3JrmosIXymI8BJAfOn98n8Zw0vMzryWQbWLm7dfjcNW7fTQD2w12VYMs05kamCApnnOhft7zmugBD900wHBm2AXN'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51Rdr7rRoiR3Jrmospp3pQh45QEbI47f9k579IDgrEJqEtzyZ80pH3JLv0zSKaVwme9RwfaVBbkb5SZU3nJknwWoe00D3yIBafC'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -44,10 +47,14 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+<<<<<<< HEAD
 
     # storage
     'storages',
 
+=======
+    'crispy_bootstrap5',  
+>>>>>>> 8429bf7 (final commmit)
 ]   
 
 MIDDLEWARE = [
@@ -171,6 +178,7 @@ if 'USE_AWS' in os.environ:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+<<<<<<< HEAD
 # pyment 
 STRIPE_SECRET_KEY = 'sk_test_...'  # Replace with your secret key
 STRIPE_PUBLISHABLE_KEY = 'pk_test_...'
@@ -181,6 +189,8 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Directory where Django will collect static files for production
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+=======
+>>>>>>> 8429bf7 (final commmit)
 
 
 
