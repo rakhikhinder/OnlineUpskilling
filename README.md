@@ -3,6 +3,7 @@
 Visit the deployed site: OnlineUpSkilling
 
 Empowering learners through accessible, scalable, and secure online education. OnlineUpSkilling is a modern learning platform with subscription-based premium content access, secure authentication, and cloud media delivery.
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/image%201%20.jpeg)
 
 
 
