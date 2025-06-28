@@ -274,7 +274,7 @@ How to Clone
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/onlineupskilling.git
+git clone https://github.com/rakhikhinder/onlineupskilling.git
 cd onlineupskilling
 Create .env:
 
