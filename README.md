@@ -6,6 +6,72 @@ Empowering learners through accessible, scalable, and secure online education. O
 
 
 
+CONTENTS
+User Experience (UX)
+
+User Stories
+
+Design
+
+Colour Scheme
+
+Typography
+
+Wireframes
+
+Features
+
+Future Implementations
+
+Accessibility
+
+Technologies Used
+
+Deployment & Local Development
+
+Deployment
+
+Local Development
+
+How to Fork
+
+How to Clone
+
+Testing
+
+Automated Testing
+
+Manual Testing
+
+Project Structure
+
+Credits
+
+Acknowledgments
+
+User Experience (UX)
+User Stories
+First Time Visitor Goals
+I want to browse available courses and understand what the platform offers.
+
+I want to register an account securely and enroll in free or premium courses.
+
+I want to trust the payment process for upgrading to premium.
+
+Returning Visitor Goals
+I want to log in and continue with my progress.
+
+I want to view my profile and manage my courses or subscription.
+
+Frequent Visitor Goals
+I want to monitor my learning progress.
+
+I want to manage my subscription or change my payment method.
+
+Design
+
+
+
 
 
 
