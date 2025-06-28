@@ -45,4 +45,20 @@ class Migration(migrations.Migration):
                 ('objects', django.contrib.auth.models.UserManager()),
             ],
         ),
+        migrations.CreateModel(
+            name='Student',
+            fields=[
+                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL)),
+                ('grade_level', models.CharField(max_length=50)),
+                ('interests', models.TextField()),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Teacher',
+            fields=[
+                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL)),
+                ('specialty', models.CharField(max_length=100)),
+                ('bio', models.TextField()),
+            ],
+        ),
     ]
