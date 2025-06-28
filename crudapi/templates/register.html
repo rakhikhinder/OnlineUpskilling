@@ -1,14 +1,50 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="row justify-content-center">
+
+<style>
+
+body {
+    background-color:white;
+}
+.register {
+    width: 600px;
+    height: 670px;
+    padding-left: 150px;
+    text: white;
+    background:rgb(91, 161, 199);
+    margin-left: 30%;
+    color: black;
+    font-size: 14px;
+}
+
+h2 {
+    color: black;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.button1 {
+    margin-right: 30px;
+    background-color:rgb(62, 63, 64);
+}
+
+.btn1 {
+    background-color:rgb(62, 63, 64); 
+}
+
+</style>
+
+<div class="register">
     <div class="col-md-6">
         <h2>Register</h2>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="button1 btn btn-primary">Register</button>
+            <a class="btn1 btn text-white " href="{% url 'dashboard'%}" > Home </a>
         </form>
     </div>
 </div>
+
 {% endblock %}

@@ -1,0 +1,60 @@
+{% extends "base.html" %} 
+
+
+{% block content %}
+
+<style>
+     body {
+            background: white;
+        }
+
+        .profile {
+            width: 600px;
+    height: 630px;
+    text: black;
+    padding-left: 170px;
+    text: white;
+   background:rgb(204, 188, 164);
+    margin-left: 30%;
+    color: black;
+    font-size: 25px; 
+    padding-top: 20px;
+        }
+        
+</style>
+    <div class="profile">
+    <h1>{{ profile_type|title }} Profile</h1>
+    
+    <!-- Profile Image -->
+    {% if profile.prof_img %}
+        <img src="{{ profile.prof_img.url }}" alt="Profile Image" width="300" height="200">
+    {% else %}
+        <p>No profile image uploaded.</p>
+    {% endif %}
+
+    <!-- Common Fields (User) -->
+    <p><strong>Username:</strong> {{ profile.user.username }}</p>
+    <p><strong>Email:</strong> {{ profile.user.email }}</p>
+
+    <!-- Teacher-Specific Fields -->
+    {% if profile_type == 'teacher' %}
+        <p><strong>Qualification:</strong> {{ profile.qualification }}</p>
+        <p><strong>Experience:</strong> {{ profile.experience }} years</p>
+        <p><strong>Subject:</strong> {{ profile.subject }}</p>
+        <p><strong>Phone:</strong> {{ profile.phone }}</p>
+    
+    <!-- Student-Specific Fields -->
+    {% elif profile_type == 'student' %}
+        <p><strong>College:</strong> {{ profile.college }}</p>
+        <p><strong>Address:</strong> {{ profile.address }}</p>
+        <p><strong>City:</strong> {{ profile.city }}</p>
+        <p><strong>State:</strong> {{ profile.state }}</p>
+        <p><strong>Country:</strong> {{ profile.Country }}</p>
+        <p><strong>PIN Code:</strong> {{ profile.pin_code }}</p>
+        <p><strong>Phone:</strong> {{ profile.phone }}</p>
+    {% endif %}
+
+    <p><strong>Joined:</strong> {{ profile.created|date:"F d, Y" }}</p>
+    </div>
+
+{% endblock %}

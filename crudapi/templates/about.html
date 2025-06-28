@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .img {
+        background-image: url("{% static 'css/background.jpeg' %}");
+        background-repeat: no-repeat;
+        margin-left: 280px;
+        height: 500px;
+        
+    }
+
+    h1 {
+        padding-top: 50px;
+        padding-left: 400px;
+        color: black;
+        font-size: 80px;
+        font-weight: bold;
+        color:  black;
+    }
+
+    h2 {
+        padding-top: 90px;
+        padding-left: 270px;
+        font-size: 40px;
+        font-weight: bold;
+        color:rgb(65, 158, 152);
+    }
+</style>
+
+<div class="img">
+    <h1> OnlineUpSkilling </h1>
+    <h2>Change is the end<br> result of all true <br> learning</h2>   
+</div>
+
+<style>
+        /* CSS Styles */
+        :root {
+            --primary-color:rgb(69, 168, 161);
+            --secondary-color: #f5f5f5;
+            --text-color: #1c1d1f;
+            --light-text: #6a6f73;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-section {
+            padding: px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+        
+        .mission-vision {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .card {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--secondary-color);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .stat-item {
+            margin: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .team-section {
+            background-color: var(--secondary-color);
+            padding: 60px 0;
+        }
+        
+        .team-members {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .team-member {
+            text-align: center;
+            max-width: 250px;
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid var(--primary-color);
+        }
+        
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .mission-vision {
+                flex-direction: column;
+            }
+            
+            .stats {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <p>Founded in 2025, OnlineUpSkilling began as a small team of educators and technologists passionate about making quality education accessible to everyone, everywhere. What started as a simple idea has grown into a global platform with thousands of courses and millions of learners.</p>
+            <p>Today, we partner with expert instructors and organizations worldwide to offer courses in hundreds of subjects, from programming and business to photography and music. Our mission remains the same: to transform lives through learning.</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Courses</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">Students</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Expert Instructors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">Our Approach</h2>
+            
+            <div class="mission-vision">
+                <div class="card">
+                    <h3>Mission</h3>
+                    <p>To democratize education by providing affordable, high-quality learning opportunities to anyone with an internet connection, helping them gain the skills needed to thrive in today's world.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Vision</h3>
+                    <p>We envision a world where anyone, anywhere can transform their life through access to the world's best learning experiences, creating more opportunities and economic mobility for all.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Values</h3>
+                    <ul>
+                        <li>Learner-first approach</li>
+                        <li>Quality education for all</li>
+                        <li>Innovation in teaching</li>
+                        <li>Empowering instructors</li>
+                        <li>Continuous improvement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+<div class="info"></div>
+{% endblock %}
