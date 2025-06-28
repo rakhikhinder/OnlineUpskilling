@@ -5,50 +5,53 @@ Visit the deployed site: OnlineUpSkilling
 Empowering learners through accessible, scalable, and secure online education. OnlineUpSkilling is a modern learning platform with subscription-based premium content access, secure authentication, and cloud media delivery.
 ![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/image%201%20.jpeg)
 
+## CONTENTS
+
+* [User Experience](#user-experience-ux)
+  * [User Stories](#user-stories)
+
+* [Design](#design)
+  * [Colour Scheme](#colour-scheme)
+  * [Typography](#typography)
+  * [Imagery](#imagery)
+  * [Wireframes](#wireframes)
+  * [Features](#features)
+    * [The Home Page](#the-home-page)
+    * [The login Page](#the-login-page)
+    * [The subscription Page](#the-subscription-page)
+    * [The 404 Error Page](#the-404-error-page)
+    * [Future Implementations](#future-implementations)
+  * [Accessibility](#accessibility)
+
+* [Technologies Used](#technologies-used)
+  * [Languages Used](#languages-used)
+  * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+
+* [Deployment & Local Development](#deployment--local-development)
+  * [Deployment](#deployment)
+  * [Local Development](#local-development)
+    * [How to Fork](#how-to-fork)
+    * [How to Clone](#how-to-clone)
+
+* [Testing](#testing)
+  * [Solved Bugs](#solved-bugs)
+  * [Known Bugs](#known-bugs)
+  
+* [Credits](#credits)
+  * [Code Used](#code-used)
+  * [Content](#content)
+  * [Media](#media)
+  * [Acknowledgments](#acknowledgments)
+
+- - -
+![onlineupskilling]()
+
+## User Experience (UX)
+
+### User Stories
 
 
-CONTENTS
-User Experience (UX)
 
-User Stories
-
-Design
-
-Colour Scheme
-
-Typography
-
-Wireframes
-
-Features
-
-Future Implementations
-
-Accessibility
-
-Technologies Used
-
-Deployment & Local Development
-
-Deployment
-
-Local Development
-
-How to Fork
-
-How to Clone
-
-Testing
-
-Automated Testing
-
-Manual Testing
-
-Project Structure
-
-Credits
-
-Acknowledgments
 
 User Experience (UX)
 User Stories
@@ -69,67 +72,298 @@ I want to monitor my learning progress.
 
 I want to manage my subscription or change my payment method.
 
-Design
+#### Frequent Visitor Goals
+I want to monitor my learning progress.
+
+I want to manage my subscription or change my payment method.
+
+## Design
+
+### Colour Scheme
+A clean, modern palette with contrasting elements for readability:
+
+#ffffff – primary background
+
+#202124 – dark header/footer
+
+#4CAF50 – call-to-action (CTA), buttons
+
+#f44336 – warnings, delete actions
+
+Text primarily uses black/grey with proper contrast
+
+ ### Typography
+Headings: Poppins – modern, readable sans-serif
+
+Body Text: Roboto – for clarity and web-optimized readability
+
+ ### Wireframes
+Created using Balsamiq:
+
+Home Page
+
+Course Detail Page
+
+User Dashboard
+
+Subscription Checkout
+### Features
+### User Management
+Registration, login, password reset (Django Allauth)
+
+Custom user profiles with learning stats
+
+Admin interface for managing users
+Features
+User Management
+Registration, login, password reset (Django Allauth)
+
+Custom user profiles with learning stats
+
+ Admin interface for managing users
+
+### Learning System
+Course listing, enrollment, and tracking
+
+Course progress view
+
+Instructors can upload/manage content
+
+### Subscription System
+Stripe API for secure payments
+
+Premium access logic via subscription status
+
+Billing management via Stripe dashboard
+
+### Media & Static Content
+AWS S3 for user uploads and course media
+
+Static file handling via WhiteNoise and S3
+
+Optimized file delivery and caching
+
+### Error Pages
+Custom 404 and 500 pages with navigation options
+#### The Home Page
+Level up your skills and unlock your potential — one course at a time.
+
+OnlineUpSkilling is a modern learning platform designed to help individuals and teams improve their knowledge and stay ahead in today’s fast-paced digital world. Whether you're just starting out or looking to deepen your expertise, we offer a range of courses from trusted instructors to suit every level.
+
+#### 🧠 Learn anytime, anywhere
+#### 📚 Track your progress
+#### 💳 Access premium content with ease
+#### 🌍 Built for individuals and teams
 
 
+### 🔐 Login Page 
+Welcome Back to OnlineUpSkilling!
+Log in to continue your learning journey.
+
+Access your enrolled courses
+
+Track your progress and achievements
+
+Manage your profile and settings
+
+View your current subscription status
+
+### 👋 Don’t have an account yet? Sign Up here
+
+### 🛠️ Forgot your password? Reset it here
+
+### 💳 Subscription Page Text
+Unlock Premium Learning with OnlineUpSkilling+
+Ready to take your learning to the next level?
+
+With a Premium Subscription, you’ll gain access to:
+
+### ✅ All premium courses and modules
+### ✅ Exclusive instructor-led masterclasses
+### ✅ Downloadable materials and certificates
+### ✅ Priority support and early access to new content
+
+Just £X.XX/month — cancel anytime.
+### Future Implementations
+Course ratings and feedback
+
+Email notifications for new content
+
+Quiz module with auto-grading
+
+Leaderboards for gamified learning
+
+Mobile-native app with same backend
+
+Accessibility
+Efforts made to enhance accessibility:
+
+Semantic HTML5 tags
+
+Descriptive alt text for all images
+
+Sufficient color contrast
+
+Keyboard-accessible forms and buttons
+
+Responsive layout on all devices
+
+Planned enhancements:
+
+ARIA attributes for screen readers
+
+Captions/transcripts for media
+
+### Technologies Used
+Languages
+HTML, CSS, JavaScript (for interactivity)
+
+Python (Django)
+
+Backend & Database
+Django
+
+PostgreSQL (Heroku addon)
+
+Authentication
+Django Allauth
+
+Password hashing via Django default system
+
+Payment & Media
+Stripe API
+
+AWS S3
+
+DevOps
+### Heroku deployment
+
+python-decouple for managing environment variables
+
+WhiteNoise for static file management
+
+Deployment & Local Development
+Deployment
+Deployed to Heroku: OnlineUpSkilling
+
+Steps to deploy:
+
+Set up Heroku CLI
+
+Create app: heroku create onlineupskilling
+
+Set config vars:
+heroku config:set SECRET_KEY=... STRIPE_SECRET_KEY=... AWS_ACCESS_KEY_ID=...
+Add Heroku Postgres:
+heroku addons:create heroku-postgresql:hobby-dev
+Push to Heroku: git push heroku main
+
+Run migrations: heroku run python manage.py migrate
+
+Create superuser: heroku run python manage.py createsuperuser
+
+Collect static: heroku run python manage.py collectstatic
+
+Local Development
+How to Fork
+Log in to GitHub and open the repo
+
+Click the "Fork" button (top-right)
+
+How to Clone
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/onlineupskilling.git
+cd onlineupskilling
+Create .env:
+
+env
+SECRET_KEY=...
+DEBUG=True
+STRIPE_SECRET_KEY=...
+AWS_ACCESS_KEY_ID=...
+Create virtual environment:
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate for Windows
+pip install -r requirements.txt
+Run migrations and start server:
+python manage.py migrate
+python manage.py runserver
+Testing
+Automated Testing
+To run all tests:
+python manage.py test
+Includes:
+
+User model/unit tests
+
+Subscription logic
+
+Payment callback handlers
+
+### Manual Testing
+User registration/login/password reset
+
+Payment flow with Stripe test cards
+
+Course access control
+
+### Media upload/viewing
+
+Admin dashboard access and restrictions
+
+Stripe test card:
+
+4242 4242 4242 4242 – success
+
+4000 0000 0000 0002 – decline
+
+### Project Structure
+bash
+Copy
+Edit
+onlineupskilling/
+├── crud/               # Django project config
+├── crudapi/            # Application logic
+│   ├── models.py       # Data models
+│   ├── views.py        # Logic and views
+│   ├── urls.py         # Routing
+│   ├── templates/      # HTML files
+├── static/             # Static assets
+├── media/              # Uploaded media files
+├── requirements.txt
+├── .env
+├── Procfile            # Heroku-specific
+└── manage.py
+Credits
+Code Resources
+Django Allauth Docs
+
+Stripe Python SDK
+
+AWS S3 Django Integration
+
+Heroku Django Deployment
+
+Media & Icons
+All icons from FontAwesome
+
+Stock images via Unsplash
+
+### Acknowledgments
+Special thanks to:
+
+Adegbenga Adeye – Code Institute Mentor
+
+Bim Williams – For debugging and deployment advice
+
+Dave Horrocks – Technical guidance
+
+Abi Harrison – UX and accessibility suggestions
 
 
-
-
-## Technology Stack
-
-This application uses the following technologies:
-
-- **Backend**: Python Django  
-- **Database**: PostgreSQL (Heroku)  
-- **Authentication**: Django Allauth  
-- **Password Hashing**: Django built-in authentication  
-- **Payment Processing**: Stripe API  
-- **Cloud Storage**: AWS S3  
-- **Deployment**: Heroku  
-- **Static Files**: WhiteNoise + AWS S3  
-- **Environment Management**: python-decouple  
-
----
-
-## Data Flow Diagram (DFD)
-
-The Data Flow Diagram represents the flow of data in the system, covering key entities:
-
-- **User**: Handles authentication, profile management, and course enrollment  
-- **Course**: Manages course content, instructors, and materials  
-- **Subscription**: Handles payment processing and premium access  
-- **Profile**: Manages user profiles and learning progress  
-
-### Levels:
-
-1. **Level 0**: System overview showing interactions between User, Course, and Subscription entities  
-2. **Level 1**: Detailed flows for authentication, course enrollment, payment processing, and profile management  
-
----
-
-## Application Introduction
-
-The platform provides a complete learning management system with these key features:
-
-### User Management:
-- Secure authentication with Django Allauth  
-- Profile management with custom user model  
-- Password reset functionality  
-
-### Learning System:
-- Course enrollment and tracking  
-- Progress monitoring  
-- Instructor management  
-
-### Subscription System:
-- Stripe integration for payments  
-- Premium content access  
-- Subscription management  
-
-### Content Management:
-- AWS S3 for media storage  
-- Course materials organization  
+n  
 - Static files optimization  
 
 ---
@@ -143,242 +377,3 @@ The platform provides a complete learning management system with these key featu
 - AWS account (for S3)  
 - Stripe account  
 
-### Installation
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/yourusername/onlineupskilling.git
-    cd onlineupskilling
-    ```
-
-2. Create virtual environment:
-
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # Linux/Mac
-    venv\Scripts\activate  # Windows
-    ```
-
-3. Install dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Set up environment variables (create `.env` file):
-
-    ```env
-    SECRET_KEY=your_django_secret_key
-    STRIPE_SECRET_KEY=your_stripe_secret_key
-    STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
-    AWS_ACCESS_KEY_ID=your_aws_access_key
-    AWS_SECRET_ACCESS_KEY=your_aws_secret_key
-    ```
-
-5. Run migrations:
-
-    ```bash
-    python manage.py migrate
-    ```
-
-6. Create superuser:
-
-    ```bash
-    python manage.py createsuperuser
-    ```
-
-7. Run development server:
-
-    ```bash
-    python manage.py runserver
-    ```
-
----
-
-## Why Use .env File
-
-The `.env` file securely stores sensitive configuration separate from code:
-
-```env
-SECRET_KEY=your_django_secret_key
-STRIPE_SECRET_KEY=your_stripe_secret_key
-STRIPE_PUBLISHABLE_KEY=your_stripe_pk_key
-AWS_ACCESS_KEY_ID=your_aws_key
-AWS_SECRET_ACCESS_KEY=your_aws_secret
-DEBUG=False  # In production
-```
-
-- `SECRET_KEY`: Django security key for cryptographic signing  
-- `Stripe Keys`: For payment processing integration  
-- `AWS Keys`: For S3 file storage access  
-- `DEBUG`: Security setting for production environment  
-
-### Implementation
-
-```python
-# settings.py
-from decouple import config
-
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', cast=bool, default=False)
-```
-
----
-
-## Deployment to Heroku
-
-Follow these steps to deploy to Heroku:
-
-1. Install Heroku CLI:
-
-    ```bash
-    brew tap heroku/brew && brew install heroku  # MacOS
-    ```
-
-2. Login to Heroku:
-
-    ```bash
-    heroku login
-    ```
-
-3. Create Heroku App:
-
-    ```bash
-    heroku create onlineupskilling
-    ```
-
-4. Set Environment Variables:
-
-    ```bash
-    heroku config:set SECRET_KEY=your_prod_secret_key
-    heroku config:set STRIPE_SECRET_KEY=your_prod_stripe_key
-    heroku config:set AWS_ACCESS_KEY_ID=your_prod_aws_key
-    heroku config:set AWS_SECRET_ACCESS_KEY=your_prod_aws_secret
-    heroku config:set DEBUG=False
-    ```
-
-5. Configure Database:
-
-    ```bash
-    heroku addons:create heroku-postgresql:hobby-dev
-    ```
-
-6. Deploy Application:
-
-    ```bash
-    git push heroku main
-    ```
-
-7. Run Migrations:
-
-    ```bash
-    heroku run python manage.py migrate
-    ```
-
-8. Collect Static Files:
-
-    ```bash
-    heroku run python manage.py collectstatic
-    ```
-
-9. Create Superuser:
-
-    ```bash
-    heroku run python manage.py createsuperuser
-    ```
-
-10. Open Application:
-
-    ```bash
-    heroku open
-    ```
-
----
-
-## Testing
-
-### Automated Tests
-
-Run Django test suite:
-
-```bash
-python manage.py test
-```
-
-### Manual Testing
-
-Key test scenarios:
-
-1. User registration and authentication  
-2. Profile management  
-3. Course enrollment  
-4. Subscription payment flow  
-5. Content access permissions  
-
-### Payment Testing
-
-Use Stripe test cards:
-
-- `4242 4242 4242 4242` - Successful payment  
-- `4000 0000 0000 0002` - Payment failure  
-
----
-
-## Project Structure
-
-```
-onlineupskilling/
-├── crud/               # Django project config
-│   ├── settings.py     # Main configuration
-│   ├── urls.py         # Root URL routing
-│   └── wsgi.py         # WSGI entry point
-├── crudapi/            # Main application
-│   ├── migrations/     # Database migrations
-│   ├── templates/      # HTML templates
-│   ├── models.py       # Data models
-│   ├── views.py        # Business logic
-│   └── urls.py         # App routing
-├── static/             # Local static files
-├── media/              # Local media files
-├── requirements.txt    # Dependencies
-├── Procfile            # Heroku process file
-└── manage.py           # Django CLI
-```
-
----
-
-
-### Acknowledgments
-
-I would like to acknowledge the following people:
-
-* Adegbenga  Adeye - My Code Institute Mentor.
-
-* Bim Williams - For being a great sounding board for me when I faced issues with moving onto the next question in the quiz, and for helping solve the issue faced with the HTML entity characters in the answer buttons.
-
-* [Dave Horrocks](https://github.com/daveyjh) - For taking the time to walk through my code with me when I was struggling with adding event listeners.
-## Conclusion
-
-OnlineUpSkilling is a comprehensive learning platform built with Django that provides:
-
-- Secure user authentication with Allauth  
-- Subscription management with Stripe  
-- Scalable content delivery with AWS S3  
-- Production-ready deployment configuration  
-- Responsive user interface  
-
-The platform serves as a foundation for delivering high-quality online education with premium content access through subscription management.
-
----
-
-This README includes:
-
-1. Technology stack overview  
-2. System architecture with Data Flow Diagram description  
-3. Detailed setup instructions  
-4. Environment variable configuration  
-5. Heroku deployment guide  
-6. Testing methodology  
-7. Project structure explanation  
-8. Key features summary  
