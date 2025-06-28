@@ -273,6 +273,16 @@ onlineupskilling/
 
 ---
 
+
+### Acknowledgments
+
+I would like to acknowledge the following people:
+
+* Adegbenga  Adeye - My Code Institute Mentor.
+
+* Bim Williams - For being a great sounding board for me when I faced issues with moving onto the next question in the quiz, and for helping solve the issue faced with the HTML entity characters in the answer buttons.
+
+* [Dave Horrocks](https://github.com/daveyjh) - For taking the time to walk through my code with me when I was struggling with adding event listeners.
 ## Conclusion
 
 OnlineUpSkilling is a comprehensive learning platform built with Django that provides:
