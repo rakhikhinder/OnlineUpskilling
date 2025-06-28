@@ -319,29 +319,11 @@ Stripe test card:
 
 4000 0000 0000 0002 – decline
 
-### Project Structure
-bash
-Copy
-Edit
-onlineupskilling/
-├── crud/               # Django project config
-├── crudapi/            # Application logic
-│   ├── models.py       # Data models
-│   ├── views.py        # Logic and views
-│   ├── urls.py         # Routing
-│   ├── templates/      # HTML files
-├── static/             # Static assets
-├── media/              # Uploaded media files
-├── requirements.txt
-├── .env
-├── Procfile            # Heroku-specific
-└── manage.py
-Credits
+
+### Credits
 Code Resources
 Django Allauth Docs
-
 Stripe Python SDK
-
 AWS S3 Django Integration
 
 Heroku Django Deployment
@@ -363,17 +345,5 @@ Dave Horrocks – Technical guidance
 Abi Harrison – UX and accessibility suggestions
 
 
-n  
-- Static files optimization  
-
----
-
-## Project Setup
-
-### Prerequisites
-
-- Python 3.10+  
-- PostgreSQL  
-- AWS account (for S3)  
-- Stripe account  
+ 
 
