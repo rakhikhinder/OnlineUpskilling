@@ -44,7 +44,7 @@ Empowering learners through accessible, scalable, and secure online education. O
   * [Acknowledgments](#acknowledgments)
 
 - - -
-![onlineupskilling]()
+![onlineupskilling](WhatsApp Image 2025-06-28 at 5.34.16 PM.jpeg)
 
 ## User Experience (UX)
 
