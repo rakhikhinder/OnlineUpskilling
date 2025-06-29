@@ -324,11 +324,17 @@ Subscription logic
 Payment callback handlers
 
 ### Manual Testing
-User registration/login/password reset
+### Home Page
 
-Payment flow with Stripe test cards
+| Feature                     | Expected Outcome                                                                     | Testing Performed                                           | Result                | Pass/Fail |
+|----------------------------|----------------------------------------------------------------------------------------|-------------------------------------------------------------|------------------------|-----------|
+| Navbar links               | All nav links should navigate correctly to their respective pages                     | Clicked each nav link                                       | Navigated as expected  | Pass      |
+| Registration button        | Opens the registration form/modal                                                     | Clicked registration                                        | Registration form shown| Pass      |
+| Login button               | Opens the login form/modal                                                            | Clicked login                                               | Login form shown       | Pass      |
+| View Product button        | Navigates to the product details page                                                 | Clicked on "View Product"                                   | Product page loaded    | Pass      |
+| Reload after login         | User should remain logged in after refreshing the page                                | Logged in, refreshed page                                   | Still logged in        | Pass      |
+| Back button functionality  | Clicking browser back button returns to previous screen                               | Navigated forward and used browser back                     | Returned correctly     | Pass      |
 
-Course access control
 
 ### Media upload/viewing
 
