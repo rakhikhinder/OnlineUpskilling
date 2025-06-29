@@ -2,20 +2,6 @@
 
 Visit the deployed site: https://onlineupskilling-1cd3c53acce4.herokuapp.com/
 
-CONTENTS
-AUTOMATED TESTING
-
-W3C Validator
-
-JavaScript Validator
-
-Lighthouse
-
-MANUAL TESTING
-
-Testing User Stories
-
-Full Testing
 
 ### AUTOMATED TESTING
 W3C Validator
@@ -23,55 +9,10 @@ W3C Validator was used to validate all HTML pages and the CSS stylesheet.
 
 index.html - Passed 
 
-game.html - Passed with 1 warning (empty <h2>, populated dynamically via JS)
-
-scores.html - Passed 
-
-404.html - Passed 
-
-500.html - Passed 
-
-style.css - Passed 
-
-JavaScript Validator
-JSHint was used to validate all JavaScript files.
-
-main.js - Passed 
-
-quiz.js - Passed with 1 warning (async usage, ES8 feature)
-
-scores.js - Passed 
-
-Note: Some warnings about unused variables were incorrect as those variables are used in function scope or dynamically.
-
-Lighthouse
-Lighthouse testing was performed in Chrome DevTools for desktop and mobile views.
-
-Desktop
-Performance: 100
-
-Accessibility: 100
-
-Best Practices: 100
-
-SEO: 100
 
 
-Mobile
-Performance: 98
-
-Accessibility: 100
-
-Best Practices: 100
-
-SEO: 100
 
 
-MANUAL TESTING
-Testing User Stories
-First Time Visitors
-User Goal	How It's Achieved
-Understand the purpose of the site quickly	Clear title, description and CTAs
 Use the site on any device	Responsive design tested on multiple devices
 Easy navigation	Intuitive buttons and layout
 
