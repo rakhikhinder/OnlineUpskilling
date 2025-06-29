@@ -8,10 +8,19 @@ Visit the deployed site: https://onlineupskilling-1cd3c53acce4.herokuapp.com/
 W3C Validator
 W3C Validator was used to validate all HTML pages and the CSS stylesheet.
 
-index.html - Passed 
-![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/process.jpeg)
-![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/process.jpeg)
+### 📱 Mobile Performance Test
 
+![Mobile Performance](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/static/image/Screenshot%202025-06-29%20143854.png)
+
+Performance test conducted using [PageSpeed Insights](https://pagespeed.web.dev/) to evaluate speed, accessibility, and best practices on mobile devices.
+
+---
+
+### 💻 Desktop Performance Test
+
+![Desktop Performance](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/static/image/Screenshot%202025-06-29%20143835.png)
+
+Performance test conducted using [PageSpeed Insights](https://pagespeed.web.dev/) to evaluate speed, accessibility, and best practices on desktop devices.
 
 
 Use the site on any device	Responsive design tested on multiple devices
