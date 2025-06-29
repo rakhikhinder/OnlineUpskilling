@@ -37,9 +37,10 @@ Empowering learners through accessible, scalable, and secure online education, O
     * [How to Clone](#how-to-clone)
 
 * [Testing](#testing)
+  * [Manual Testing](#manual-testing)
   * [Solved Bugs](#solved-bugs)
   * [Known Bugs](#known-bugs)
-  
+
 * [Credits](#credits)
   * [Code Used](#code-used)
   * [Content](#content)
