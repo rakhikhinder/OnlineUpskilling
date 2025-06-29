@@ -251,7 +251,7 @@ AWS S3
 
 DevOps
 ### Heroku deployment
-
+  ![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/heroku.jpeg)
 python-decouple for managing environment variables
 
 WhiteNoise for static file management
