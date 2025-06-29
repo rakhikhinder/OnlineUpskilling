@@ -42,10 +42,8 @@ Empowering learners through accessible, scalable, and secure online education. O
   * [Content](#content)
   * [Media](#media)
   * [Acknowledgments](#acknowledgments)
-
-- - -
-![OnlineUpSkilling-Learning Platform] ( WhatsApp Image 2025-06-28 at 5.34.16 PM.jpeg
-)
+    
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/image%201%20.jpeg)
 
 ## User Experience (UX)
 
@@ -79,6 +77,8 @@ I want to monitor my learning progress.
 I want to manage my subscription or change my payment method.
 
 ## Design
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/image%201%20.jpeg)
+
 
 ### Colour Scheme
 A clean, modern palette with contrasting elements for readability:
@@ -155,6 +155,7 @@ OnlineUpSkilling is a modern learning platform designed to help individuals and 
 #### 📚 Track your progress
 #### 💳 Access premium content with ease
 #### 🌍 Built for individuals and teams
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/image%201%20.jpeg)
 
 
 ### 🔐 Login Page 
@@ -172,7 +173,8 @@ View your current subscription status
 ### 👋 Don’t have an account yet? Sign Up here
 
 ### 🛠️ Forgot your password? Reset it here
-![online upskilling]`  (WhatsApp Image 2025-06-28 at 5.27.14 PM (2).jpeg)
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/image%201%20.jpeg)
+
 
 ### 💳 Subscription Page Text
 Unlock Premium Learning with OnlineUpSkilling+
@@ -215,6 +217,8 @@ Planned enhancements:
 ARIA attributes for screen readers
 
 Captions/transcripts for media
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/image%201%20.jpeg)
+
 
 ### Technologies Used
 Languages
