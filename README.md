@@ -145,6 +145,10 @@ Static file handling via WhiteNoise and S3
 Optimized file delivery and caching
 
 ### Error Pages
+
+
+
+
 Custom 404 and 500 pages with navigation options
 #### The Home Page
 Level up your skills and unlock your potential — one course at a time.
