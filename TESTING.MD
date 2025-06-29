@@ -1,7 +1,8 @@
 ### OnlineUpskilling  - Testing
 
 Visit the deployed site: https://onlineupskilling-1cd3c53acce4.herokuapp.com/
-https://github.com/rakhikhinder/OnlineUpskilling/blob/card/README.md
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/image%201%20.jpeg)
+
 
 ### AUTOMATED TESTING
 W3C Validator
