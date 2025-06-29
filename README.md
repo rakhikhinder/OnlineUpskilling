@@ -81,6 +81,7 @@ I want to manage my subscription or change my payment method.
 ### Data flow diagram (DFD)
 ![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/data%20flow.png)
 ### Colour Scheme
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/color.jpeg)
 A clean, modern palette with contrasting elements for readability:
 
 #ffffff – primary background
