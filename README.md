@@ -339,6 +339,19 @@ Payment callback handlers
 | Button hover effect        | All buttons should change background to blue on hover                                 | Hovered over all clickable buttons                          | Background changed to blue | Pass  |
 
 
+### Register Page
+
+| Feature              | Expected Outcome                                                                 | Testing Performed                                           | Result                    | Pass/Fail |
+|---------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------|----------------------------|-----------|
+| Username field       | Allows user to input a valid username                                              | Entered text in username field                              | Username accepted          | Pass      |
+| Password field       | Allows user to input a secure password                                             | Entered password                                             | Password accepted          | Pass      |
+| Confirm Password     | Must match the password entered above                                              | Entered matching and non-matching passwords                 | Shows error on mismatch / allows match | Pass |
+| Submit button        | Submits the form only when all fields are valid                                    | Filled valid inputs and clicked submit                      | Form submitted successfully | Pass      |
+| Submit button        | Prevents submission when required fields are empty or invalid                      | Tried submitting empty form                                 | Form not submitted, error shown | Pass |
+| Home button          | Redirects to the home page                                                         | Clicked home button                                         | Navigated to home page     | Pass      |
+| Hover effect         | All buttons should change background to blue on hover                             | Hovered over submit and home buttons                        | Background changed to blue | Pass      |
+
+
 ### Media upload/viewing
 
 Admin dashboard access and restrictions
