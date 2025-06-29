@@ -9,8 +9,8 @@ W3C Validator
 W3C Validator was used to validate all HTML pages and the CSS stylesheet.
 
 index.html - Passed 
-
-
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/process.jpeg)
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/process.jpeg)
 
 
 
