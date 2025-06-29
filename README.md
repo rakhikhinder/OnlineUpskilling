@@ -373,6 +373,16 @@ Payment callback handlers
 | Payment page load      | Stripe payment gateway loads correctly                            | Arrived at payment page                            | Stripe payment form displayed    | Pass      |
 | Hover effect           | Buttons and dropdown have hover effects                           | Hovered over dropdown and subscribe button        | Visual hover effect visible      | Pass      |
 
+### Stripe Payment Page
+
+| Feature             | Expected Outcome                                      | Testing Performed                      | Result                         | Pass/Fail |
+|---------------------|-------------------------------------------------------|--------------------------------------|--------------------------------|-----------|
+| Payment form load   | Stripe payment form loads correctly                   | Navigated to payment page             | Payment form visible            | Pass      |
+| Back button         | Clicking back returns to the previous subscription page | Clicked back button                   | Redirected to subscription page| Pass      |
+| Loading indicator   | Shows loading while payment is processing             | Submitted payment and observed UI    | Loading spinner displayed       | Pass      |
+| Payment success flow| After successful payment, user is redirected/confirmed | Completed payment                     | Redirect or confirmation shown  | Pass      |
+| Payment failure flow| On payment failure, user sees an error or retry option| Submitted invalid payment             | Error displayed, retry possible | Pass      |
+| Hover effect        | Buttons change style on hover                          | Hovered over buttons                  | Visual hover effect visible     | Pass      |
 
 ### Media upload/viewing
 
