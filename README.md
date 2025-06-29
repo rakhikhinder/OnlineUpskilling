@@ -49,7 +49,7 @@ Empowering learners through accessible, scalable, and secure online education. O
 
 ### User Stories
 
-![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/data%20flow.png)
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/story%20page.jpeg)
 
 
 User Experience (UX)
@@ -79,7 +79,7 @@ I want to manage my subscription or change my payment method.
 ## Design
 ![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/image%201%20.jpeg)
 ### Data flow diagram (DFD)
-![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/commit/19ba53f62d6838060690a0d14032f7ff344fa0c2)
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/data%20flow.png)
 ### Colour Scheme
 A clean, modern palette with contrasting elements for readability:
 
@@ -137,6 +137,7 @@ Premium access logic via subscription status
 
 Billing management via Stripe dashboard
 
+![OnlineUpSkilling-Learning Platform]()
 ### Media & Static Content
 AWS S3 for user uploads and course media
 
@@ -145,7 +146,7 @@ Static file handling via WhiteNoise and S3
 Optimized file delivery and caching
 
 ### Error Pages
-
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/error%20.jpeg)
 
 
 
@@ -177,7 +178,7 @@ View your current subscription status
 ### 👋 Don’t have an account yet? Sign Up here
 
 ### 🛠️ Forgot your password? Reset it here
-![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/image%201%20.jpeg)
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/login%20page.jpeg)
 
 
 ### 💳 Subscription Page Text
@@ -190,7 +191,9 @@ With a Premium Subscription, you’ll gain access to:
 ### ✅ Exclusive instructor-led masterclasses
 ### ✅ Downloadable materials and certificates
 ### ✅ Priority support and early access to new content
-
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/subscription.jpeg)
+### Payment page 
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/pyment.jpeg)
 Just £X.XX/month — cancel anytime.
 ### Future Implementations
 Course ratings and feedback
