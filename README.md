@@ -363,6 +363,16 @@ Payment callback handlers
 | Submit button        | Prevents submission with empty or invalid fields                             | Tried submitting empty/invalid inputs      | Form not submitted, error shown | Pass    |
 | Hover effect         | Submit button should change background to blue on hover                      | Hovered over the submit button             | Background changed to blue    | Pass      |
 
+### Subscription Page
+
+| Feature                 | Expected Outcome                                                  | Testing Performed                                | Result                           | Pass/Fail |
+|------------------------|-------------------------------------------------------------------|-------------------------------------------------|---------------------------------|-----------|
+| Plan selection dropdown | Dropdown should list available plans: Basic and Premium          | Clicked dropdown and viewed options              | Both Basic and Premium options shown | Pass      |
+| Select plan            | User can select either Basic or Premium plan                      | Selected each plan option                         | Selection updated correctly      | Pass      |
+| Subscribe button       | Clicking subscribe redirects to the payment page                  | Selected a plan and clicked Subscribe             | Redirected to payment page       | Pass      |
+| Payment page load      | Stripe payment gateway loads correctly                            | Arrived at payment page                            | Stripe payment form displayed    | Pass      |
+| Hover effect           | Buttons and dropdown have hover effects                           | Hovered over dropdown and subscribe button        | Visual hover effect visible      | Pass      |
+
 
 ### Media upload/viewing
 
