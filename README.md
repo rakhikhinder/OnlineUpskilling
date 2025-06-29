@@ -5,7 +5,7 @@
 
 **Visit the deployed site:** [OnlineUpSkilling](https://onlineupskilling-1cd3c53acce4.herokuapp.com/)
 
-Empowering learners through accessible, scalable, and secure online education. OnlineUpSkilling is a modern learning platform with subscription-based premium content access, secure authentication, and cloud media delivery.
+Empowering learners through accessible, scalable, and secure online education, OnlineUpSkilling is a comprehensive learning platform designed for modern digital education needs. It offers a user-friendly interface combined with subscription-based access to premium content, ensuring learners at all levels can grow at their own pace the platform is built to provide a reliable and personalized learning experience—anytime, anywhere. Whether you're an individual looking to enhance your skills or an organization seeking scalable training solutions, OnlineUpSkilling is tailored to support continuous growth and development.
 
 
 ## CONTENTS
