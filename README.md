@@ -326,17 +326,19 @@ Payment callback handlers
 ### Manual Testing
 ### Home Page
 
-### Home Page
 
-| Feature                     | Expected Outcome                                                                     | Testing Performed                                           | Result                | Pass/Fail |
-|----------------------------|----------------------------------------------------------------------------------------|-------------------------------------------------------------|------------------------|-----------|
-| Navbar links               | All nav links should navigate correctly to their respective pages                     | Clicked each nav link                                       | Navigated as expected  | Pass      |
-| Registration button        | Opens the registration form/modal                                                     | Clicked registration                                        | Registration form shown| Pass      |
-| Login button               | Opens the login form/modal                                                            | Clicked login                                               | Login form shown       | Pass      |
-| View Product button        | Navigates to the product details page                                                 | Clicked on "View Product"                                   | Product page loaded    | Pass      |
-| Reload after login         | User should remain logged in after refreshing the page                                | Logged in, refreshed page                                   | Still logged in        | Pass      |
-| Back button functionality  | Clicking browser back button returns to previous screen                               | Navigated forward and used browser back                     | Returned correctly     | Pass      |
-| Button hover effect        | All buttons should change background to blue on hover                                 | Hovered over all clickable buttons                          | Background changed to blue | Pass  |
+| Feature                     | Expected Outcome                                                                     | Testing Performed                                           | Result                    | Pass/Fail |
+|----------------------------|----------------------------------------------------------------------------------------|-------------------------------------------------------------|----------------------------|-----------|
+| Navbar links               | All nav links should navigate correctly to their respective pages                     | Clicked each nav link                                       | Navigated as expected      | Pass      |
+| Registration button        | Opens the registration form/modal                                                     | Clicked registration                                        | Registration form shown    | Pass      |
+| Login button               | Opens the login form/modal                                                            | Clicked login                                               | Login form shown           | Pass      |
+| View Product button        | Navigates to the product details page                                                 | Clicked on "View Product"                                   | Product page loaded        | Pass      |
+| Reload after login         | User should remain logged in after refreshing the page                                | Logged in, refreshed page                                   | Still logged in            | Pass      |
+| Back button functionality  | Clicking browser back button returns to previous screen                               | Navigated forward and used browser back                     | Returned correctly         | Pass      |
+| Button hover effect        | All buttons should change background to blue on hover                                 | Hovered over all clickable buttons                          | Background changed to blue | Pass      |
+| Title click reload         | Clicking on the site title should reload the home page                                | Clicked on the site title                                   | Home page reloaded         | Pass      |
+| Post-login links visible   | Profile and Subscription links should appear after successful login                   | Logged in and checked the navbar                            | Links were visible         | Pass      |
+
 
 
 ### Register Page
@@ -350,6 +352,16 @@ Payment callback handlers
 | Submit button        | Prevents submission when required fields are empty or invalid                      | Tried submitting empty form                                 | Form not submitted, error shown | Pass |
 | Home button          | Redirects to the home page                                                         | Clicked home button                                         | Navigated to home page     | Pass      |
 | Hover effect         | All buttons should change background to blue on hover                             | Hovered over submit and home buttons                        | Background changed to blue | Pass      |
+
+### Login Page
+
+| Feature              | Expected Outcome                                                             | Testing Performed                          | Result                        | Pass/Fail |
+|---------------------|------------------------------------------------------------------------------|--------------------------------------------|-------------------------------|-----------|
+| Username field       | Allows user to input a valid username                                        | Entered username                           | Username accepted             | Pass      |
+| Password field       | Allows user to input a password                                              | Entered password                           | Password accepted             | Pass      |
+| Submit button        | Submits the form only when both fields are filled correctly                  | Entered valid credentials and clicked submit | Logged in successfully        | Pass      |
+| Submit button        | Prevents submission with empty or invalid fields                             | Tried submitting empty/invalid inputs      | Form not submitted, error shown | Pass    |
+| Hover effect         | Submit button should change background to blue on hover                      | Hovered over the submit button             | Background changed to blue    | Pass      |
 
 
 ### Media upload/viewing
