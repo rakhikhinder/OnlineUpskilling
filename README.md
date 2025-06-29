@@ -124,6 +124,7 @@ Custom user profiles with learning stats
  Admin interface for managing users
 
 ### Learning System
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/course%20(1).jpeg)
 Course listing, enrollment, and tracking
 
 Course progress view
