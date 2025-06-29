@@ -43,7 +43,7 @@ Empowering learners through accessible, scalable, and secure online education. O
   * [Media](#media)
   * [Acknowledgments](#acknowledgments)
     
-![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/image%201%20.jpeg)
+![OnlineUpSkilling-Learning Platform](homepage 1.jpeg)
 
 ## User Experience (UX)
 
