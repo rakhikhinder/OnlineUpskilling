@@ -4,7 +4,7 @@ Visit the deployed site: OnlineUpSkilling
 
 Empowering learners through accessible, scalable, and secure online education. OnlineUpSkilling is a modern learning platform with subscription-based premium content access, secure authentication, and cloud media delivery.
 ![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/image%201%20.jpeg)
-![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/commit/e69972fa57b0af80c4f458353c01c47429f4b360)
+
 ## CONTENTS
 
 * [User Experience](#user-experience-ux)
@@ -43,7 +43,7 @@ Empowering learners through accessible, scalable, and secure online education. O
   * [Media](#media)
   * [Acknowledgments](#acknowledgments)
     
-![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/commit/e69972fa57b0af80c4f458353c01c47429f4b360)
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/register%20page.jpeg)
 
 ## User Experience (UX)
 
@@ -137,7 +137,7 @@ Premium access logic via subscription status
 
 Billing management via Stripe dashboard
 
-![OnlineUpSkilling-Learning Platform]()
+![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/subscription.jpeg)
 ### Media & Static Content
 AWS S3 for user uploads and course media
 
@@ -193,6 +193,7 @@ With a Premium Subscription, you’ll gain access to:
 ### ✅ Priority support and early access to new content
 ![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/subscription.jpeg)
 ### Payment page 
+
 ![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/pyment.jpeg)
 Just £X.XX/month — cancel anytime.
 ### Future Implementations
