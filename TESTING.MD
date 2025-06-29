@@ -1,4 +1,4 @@
-OnlineUpskilling  - Testing
+### OnlineUpskilling  - Testing
 
 Visit the deployed site: https://onlineupskilling-1cd3c53acce4.herokuapp.com/
 
@@ -75,26 +75,26 @@ Understand the purpose of the site quickly	Clear title, description and CTAs
 Use the site on any device	Responsive design tested on multiple devices
 Easy navigation	Intuitive buttons and layout
 
-Returning Visitors
+### Returning Visitors
 User Goal	How It's Achieved
 Play again easily	Replay buttons and persistent links
 Increase difficulty	Option to choose difficulty
 
-Frequent Visitors
+### Frequent Visitors
 User Goal	How It's Achieved
 Improve score and track it	High scores feature
 Challenge self with harder levels	Multiple difficulties supported
 
-Full Testing
+### Full Testing
 Tested devices:
 
-Laptop: MacBook Pro 14”
+ ### Laptop: MacBook Pro 14”
 
-Mobile: iPhone 13, iPhone XR, Pixel 6
+ ### Mobile: iPhone 13, iPhone XR, Pixel 6
 
-Browsers: Chrome, Safari, Firefox
+### Browsers: Chrome, Safari, Firefox
 
-Additional feedback gathered from testers on multiple devices with various screen sizes.
+### Additional feedback gathered from testers on multiple devices with 
 
 ### Feature Testing Summary
 Each section below includes expected results, testing steps and actual outcomes.
