@@ -426,14 +426,14 @@ Stock images via Unsplash
 
 ### Acknowledgments
 Special thanks to:
+ 
+Jubril Akolade – Code Institute Mentor
 
-Adegbenga Adeye – Code Institute Mentor
+Pulkit Khatter – For debugging and deployment advice
 
-Bim Williams – For debugging and deployment advice
+Jubril – Technical guidance
 
-Dave Horrocks – Technical guidance
-
-Abi Harrison – UX and accessibility suggestions 
+Deepak Kumar – UX and accessibility suggestions 
 
 
 
