@@ -104,8 +104,24 @@ Headings: Poppins – modern, readable sans-serif
 
 Body Text: Roboto – for clarity and web-optimized readability
 
- ### Wireframes
-Created using Balsamiq:
+### 🧩 Wireframes  
+Created using Balsamiq to visualize the core screens before development:
+
+#### 🏠 Home Page
+![Home Page Wireframe](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/WhatsApp%20Image%202025-06-29%20at%2015.07.36_75a23b24.jpg)
+
+#### 💳 Subscription Page
+![Subscription Page Wireframe](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/WhatsApp%20Image%202025-06-29%20at%2015.23.33_2b701630.jpg)
+
+#### 🧾 Payment Page
+![Payment Page Wireframe](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/WhatsApp%20Image%202025-06-29%20at%2015.26.59_c24b3173.jpg)
+
+#### 🔐 Login Page
+![Login Page Wireframe](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/WhatsApp%20Image%202025-06-29%20at%2015.30.22_81fe6119.jpg)
+
+#### 📝 Register Page
+![Register Page Wireframe](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/WhatsApp%20Image%202025-06-29%20at%2015.36.13_a3245ae2.jpg)
+
 
 Home Page
 
