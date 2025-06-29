@@ -172,6 +172,7 @@ View your current subscription status
 ### 👋 Don’t have an account yet? Sign Up here
 
 ### 🛠️ Forgot your password? Reset it here
+![online upskilling]`  (WhatsApp Image 2025-06-28 at 5.27.14 PM (2).jpeg)
 
 ### 💳 Subscription Page Text
 Unlock Premium Learning with OnlineUpSkilling+
