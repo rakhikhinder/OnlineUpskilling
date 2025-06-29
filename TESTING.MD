@@ -26,6 +26,16 @@ Performance test conducted using [PageSpeed Insights](https://pagespeed.web.dev/
 Use the site on any device	Responsive design tested on multiple devices
 Easy navigation	Intuitive buttons and layout
 
+Below are the screenshots of the results:
+
+![Performance Metrics](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/static/image/Screenshot%202025-06-29%20143746.png)
+
+![Accessibility Metrics](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/static/image/Screenshot%202025-06-29%20143803.png)
+
+![Best Practices Metrics](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/static/image/Screenshot%202025-06-29%20143820.png)
+
+![Overall PageSpeed Result](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/static/image/Screenshot%202025-06-29%20143835.png)
+
 ### Returning Visitors
 User Goal	How It's Achieved
 Play again easily	Replay buttons and persistent links
