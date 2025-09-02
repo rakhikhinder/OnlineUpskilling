@@ -46,6 +46,19 @@ Empowering learners through accessible, scalable, and secure online education, O
   * [Content](#content)
   * [Media](#media)
   * [Acknowledgments](#acknowledgments)
+ ## Credentials
+
+### Admin  
+- **Username:** `admin`  
+- **Password:** `admin`  
+
+### Rakhi  
+- **Username:** `rakhi`  
+- **Password:** `rakhi1`  
+
+### Shiwani  
+- **Username:** `shiwani`  
+- **Password:** `@irtel123`  
     
 ![OnlineUpSkilling-Learning Platform](https://github.com/rakhikhinder/OnlineUpskilling/blob/card/register%20page.jpeg)
 
